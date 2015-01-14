@@ -15,43 +15,43 @@ The guide assumes the following.
 
 The reason why we create a separate target for j2objc generated files, it allows us to extra build configuration to the target without affecting the main app target. One particular thing is that we want to turn off ARC for performance gains. With a separate target, we can turn off ARC on the static library target, but keep ARC on for the main app.
 
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/1-add-target.png)
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/2-choose-static-lib.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/1-add-target.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/2-choose-static-lib.png)
 
 ## Fix Group Path
 
 Your target group points to a directory that may not exist. Make sure the folder is created. You will need to put LibConfig.xcconfig into it later. What's more, not having it created will cause problem when you add your java source files later.
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/3-fix-group-path.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/3-fix-group-path.png)
 
 ## Adding Configuration Settings File
 
 We now add LibConfig.xcconfig to static lib target and AppConfig.xcconfig to app target. The xcconfig files capture some common build settings associated with j2objc. We are doing it in a Settings bundle because it saves you the trouble to dig into Build Settings and find the entries to modify.
 
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/4-add-xcconfig.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/4-add-xcconfig.png)
 
 Once you have the files added, copy the content of xcconfig in the sample project into them. The only things you need to modify are J2OBJC_HOME and JAVA_SOURCE_PATH. Set J2OBJC_HOME to your j2objc/dist path. Set JAVA_SOURCE_PATH to the root folder of your java source path.
 
 Adding the files to the project doesn't make them effective. To use them, set them in the project settings.
 
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/5-use-xcconfig.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/5-use-xcconfig.png)
 
 As mentioned earlier, we need to turn off ARC on the static lib. Having ARC on could cause your program an order of magnitude slower than it would with ARC off. Since j2objc is writing the code for us, turning ARC off is nothing but benefit. The ARC flagged (CLANG_ENABLE_OBJC_ARC) in turned off by LibConfig.xcconfig for you.
 
 ## Adding Java Source Files
 
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/6-add-java-sources.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/6-add-java-sources.png)
 
 ## Adding Build Rules
 
 Adding your initial set of java files.
 
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/7-add-build-rule.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/7-add-build-rule.png)
 
 ## Adding Target Dependencies and Linking The Static Lib to App
 
 Target dependency will make your static library is built before your app target is built.
 
-![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/yixiang/screenshots/8-add-dependency.png)
+![](https://raw.githubusercontent.com/yixiang/Xcode-J2ObjC-Example/master/screenshots/8-add-dependency.png)
 
 ## Ready to Work
 
