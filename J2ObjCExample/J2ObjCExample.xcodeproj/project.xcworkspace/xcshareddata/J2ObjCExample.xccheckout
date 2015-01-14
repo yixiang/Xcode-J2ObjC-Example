@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5BF59E25-E5B2-4B4A-A67F-68677C512667</string>
+	<key>IDESourceControlProjectName</key>
+	<string>J2ObjCExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EB5A3F460ACA3C6D5C3BF159D2F6D0D7A63DBFDA</key>
+		<string>github.com:yixiang/Xcode-J2ObjC-Example.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>J2ObjCExample/J2ObjCExample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EB5A3F460ACA3C6D5C3BF159D2F6D0D7A63DBFDA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:yixiang/Xcode-J2ObjC-Example.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EB5A3F460ACA3C6D5C3BF159D2F6D0D7A63DBFDA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB5A3F460ACA3C6D5C3BF159D2F6D0D7A63DBFDA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Xcode-J2ObjC-Example</string>
+		</dict>
+	</array>
+</dict>
+</plist>
